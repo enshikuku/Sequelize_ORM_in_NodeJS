@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head') %>
+</head>
+<body>
+  <%- include('./partials/navbar', {path: '/'}) %>
+  
+  <div class="container">
+    <div class="jumbotron bg-light p-5 rounded">
+      <h1 class="display-4">Welcome to the User & Country Management System</h1>
+      <p class="lead">This application allows you to manage users and countries with full CRUD operations.</p>
+      <hr class="my-4">
+      <p>Use the navigation bar above to access different sections of the application.</p>
+      
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">User Management</h5>
+              <p class="card-text">Create, view, edit, and delete user records.</p>
+              <a href="/users" class="btn btn-primary">Go to Users</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Country Management</h5>
+              <p class="card-text">Create, view, edit, and delete country records.</p>
+              <a href="/countries" class="btn btn-success">Go to Countries</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast container for notifications -->
+  <div class="position-fixed bottom-0 end-0 p-3" id="toast-container"></div>
+  
+  <%- include('./partials/footer') %>
+</body>
+</html>
